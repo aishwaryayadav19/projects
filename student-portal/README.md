@@ -58,5 +58,3 @@ event - compiled successfully
 Now you can visit the UI at http://localhost:8182
 
 <br />
-
-Finally 👀, If you get a chance to go through our codebase and if you have any questions or if you think there is something which can be improved please reach out to us or create a PR.
