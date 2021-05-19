@@ -19,7 +19,7 @@ const MyApp = (props: any) => {
   return (
     <React.Fragment>
       <Head>
-        <title>Admin Console</title>
+        <title>Student Portal</title>
         <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
       </Head>
       <Provider store={store}>
