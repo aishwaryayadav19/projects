@@ -55,7 +55,7 @@ You should see
 event - compiled successfully
 ```
 
-Now you can hit the APIs at http://localhost:8182
+Now you can visit the UI at http://localhost:8182
 
 <br />
 
