@@ -6,13 +6,19 @@ You need yarn, react, node, and mysql installed in your machine.
 
 ```
 Clone the project and
-$ cd student-portal-server
+$ cd student-portal
 
-Checkout to the crait-dev branch
-$ git checkout crait-dev
+Checkout to the student-portal branch
+$ git checkout student-portal
 
 Always pull the latest code
-$ git pull origin crait-dev
+$ git pull origin student-portal
+```
+
+Setup the server
+```
+Move to the server project
+$ cd student-portal-server
 
 Install package dependencies
 $ yarn
@@ -24,43 +30,32 @@ $ yarn dev
 You should see
 
 ```
-ready - started server on 0.0.0.0:8181, url: http://localhost:8181
+Student Service is ready to rock and roll .. �🚀 .. { host: '0.0.0.0', port: 8484 }
 ```
 
-Now you can visit http://localhost:8181
+Now you can hit the APIs at http://localhost:8484
 
 <br />
 
-## Project Structure 📁
+Setup the frontend service
+```
+Move to the frontend project
+$ cd student-portal-ui
 
-- components: All react components
-- pages: All pages / templates. This directory is also routing system of the application.
-- state: Redux state management
-- public: Public Assets
-- libs: Helper & Utils code
-- storybook-stories: Storybook's Stories
-- .storybook: Storybook configs
-- .ci & scripts: Infra related scripts.
-- \_\_tests\_\_: Unit Test cases
+Install package dependencies
+$ yarn
 
-For application feature development you will spend most of your time in `components, pages and state` directories.
+Run application in DEV mode
+$ yarn dev
+```
 
-<br />
+You should see
 
-## Branch naming convention 👍
+```
+event - compiled successfully
+```
 
-`crait-<ticket-num>-[feat, bugfix]-<ticket-info-in-short>`
-
-Ex: `crait-100-feat-header-comp`
-
-<br />
-
-## TODO 📋
-
-- Unit Test setup
-- SonarLint setup
-- Monorepo setup
-- UAT ENV setup
+Now you can hit the APIs at http://localhost:8182
 
 <br />
 

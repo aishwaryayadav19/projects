@@ -67,5 +67,5 @@ process.on('uncaughtException', (error) => {
 
 server.listen(port, host, () => {
   // Function to load up the error manager
-  console.log('Patient Service is ready to rock and roll .. 🚀 ..', { host, port })
+  console.log('Student Service is ready to rock and roll .. 🚀 ..', { host, port })
 })
