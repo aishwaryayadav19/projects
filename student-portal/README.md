@@ -15,10 +15,28 @@ Always pull the latest code
 $ git pull origin student-portal
 ```
 
+Setup the database
+```
+Open the queries.txt file
+Execute the commands in the given sequence on your local mysql server
+```
+
+You should have
+
+```
+John Doe added as an admin to the database
+```
+
+Now your database is ready
+
+<br />
+
 Setup the server
 ```
 Move to the server project
 $ cd student-portal-server
+
+In the config file on the path /src/config/index.ts : add your mysql username and password to the db config and save the file.
 
 Install package dependencies
 $ yarn
