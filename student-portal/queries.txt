@@ -1,0 +1,47 @@
+create database studentportal;
+
+use studentportal;
+
+create table classes (
+	id int NOT NULL AUTO_INCREMENT,
+	year int,
+	PRIMARY KEY(id)
+);
+
+create table students (
+	id int NOT NULL AUTO_INCREMENT,
+	full_name varchar(100),
+	gender varchar(10),
+	class int,
+	date_of_birth varchar(12),
+	street varchar(30),
+	city varchar(30),
+	state varchar(30),
+	country varchar(30),
+	postal_code varchar(20),
+	email varchar(40) UNIQUE,
+	contact_number varchar(15),
+	is_admin bool DEFAULT 0,
+	PRIMARY KEY(id),
+	FOREIGN KEY (class) REFERENCES classes(id)
+);
+
+create table documents(
+	id int NOT NULL AUTO_INCREMENT, 
+	doc_number varchar(20), 
+	doc blob, 
+	PRIMARY KEY(id)
+);
+
+create table student_document_mapping(
+	id int NOT NULL AUTO_INCREMENT, 
+	student_id int, 
+	document_id int, 
+	FOREIGN KEY (student_id) REFERENCES students(id), 
+	FOREIGN KEY (document_id) REFERENCES documents (id),
+	PRIMARY KEY (id)
+);
+
+INSERT INTO classes(year) VALUES (2015),(2016),(2017),(2018),(2019),(2020);
+
+INSERT INTO students(full_name, gender, class, date_of_birth, street, city, state, country, postal_code, email, contact_number, is_admin) VALUE ('John Doe', 'Male', 1, '01/01/1980', '1st street', 'NY', 'NY', 'USA', '10001', 'johndoe@gmail.com', '9876543210', 1);
